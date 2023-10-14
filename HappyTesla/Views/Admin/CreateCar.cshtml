@@ -1,0 +1,38 @@
+@model CreateCarViewModel
+
+@{
+    ViewData["Title"] = "Create new car";
+}
+
+<h1 class="display-1">Create reservation</h1>
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Name"/>
+                <label asp-for="Name">Name</label>
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Model"/>
+                <label asp-for="Model">Model</label>
+                <span class="text-danger" asp-validation-for="Model"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Price"/>
+                <label asp-for="Price">Price</label>
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Color"/>
+                <label asp-for="Color">Color</label>
+                <span class="text-danger" asp-validation-for="Color"></span>
+            </div>
+            <button class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
+

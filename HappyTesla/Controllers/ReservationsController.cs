@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace HappyTesla.Controllers;
 
 [Authorize]
-[Route("Controller")]
+[Route("{controller}")]
 public class ReservationsController : Controller
 {
     private readonly ReservationsRepository _reservationsRepository;
@@ -95,10 +95,10 @@ public class ReservationsController : Controller
 
     private async Task PopulateCreateReservationViewModelWithLocationsAndCars(CreateReservationViewModel viewModel)
     {
-        var allLocations = await _locationsRepository.GetAllLocations();
+        var allLocations = await _locationsRepository.GetAllLocationsAsync();
         foreach (var location in allLocations)
         {
-            viewModel.AllLocations.Add( new SelectListItem(location.Country + ", " + location.City + ", " + location.Adress, location.Id.ToString()));
+            viewModel.AllLocations.Add( new SelectListItem(location.Country + ", " + location.City + ", " + location.Address, location.Id.ToString()));
         }
 
         var allCars = await _carsRepository.GetAllCars();

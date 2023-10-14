@@ -22,4 +22,32 @@ public class CarsRepository
     {
         return await _applicationDbContext.Cars.ToListAsync();
     }
+    
+    public async Task DeleteCarAsync(int id)
+    {
+        var carToDelete = await _applicationDbContext.Cars
+            .SingleOrDefaultAsync(r => r.Id == id);
+
+        if (carToDelete == null)
+        {
+            return;
+        }
+        
+        _applicationDbContext.Cars.Remove(carToDelete);
+        await _applicationDbContext.SaveChangesAsync();
+    }
+    
+    public async Task CreateCarAsync(string name, string model, decimal price, string color)
+    {
+        var newCar = new Car
+        {
+            Name = name,
+            Model = model,
+            Price = price,
+            Color = color
+        };
+        
+        _applicationDbContext.Add(newCar);
+        await _applicationDbContext.SaveChangesAsync();
+    }
 }

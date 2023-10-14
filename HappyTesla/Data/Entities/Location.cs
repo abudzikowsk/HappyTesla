@@ -7,14 +7,15 @@ public class Location
     public int Id { get; set; }
     public string Country { get; set; }
     public string City { get; set; }
-    public string Adress { get; set; }
+    public string Address { get; set; }
     public LocationViewModel MapToViewModel()
     {
         return new LocationViewModel
         {
+            Id = Id,
             Country = Country,
             City = City,
-            Adress = Adress
+            Adress = Address
         };
     }
 }

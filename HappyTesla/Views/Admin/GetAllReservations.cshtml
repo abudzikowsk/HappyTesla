@@ -1,0 +1,44 @@
+@model List<ReservationsViewModel>
+
+@{
+    ViewData["Title"] = "Your reservations";
+}
+
+<h1 class="display-1">All reservations</h1>
+@if (Model.Count > 0)
+{
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Start location</th>
+            <th scope="col">End location</th>
+            <th scope="col">Car</th>
+            <th scope="col">Start date</th>
+            <th scope="col">End date</th>
+            <th scope="col">Price</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.StartLocation.Country, @reservation.StartLocation.City, @reservation.StartLocation.Adress</td>
+                <td>@reservation.EndLocation.Country, @reservation.EndLocation.City, @reservation.EndLocation.Adress</td>
+                <td>@reservation.Car.Name @reservation.Car.Model, @reservation.Car.Color</td>
+                <td>@reservation.StartDate.ToString("f")</td>
+                <td>@reservation.EndDate.ToString("f")</td>
+                <td>@reservation.Price€</td>
+                <td>
+                    @if (reservation.StartDate > DateTime.Now)
+                    {
+                        <form asp-action="DeleteReservation" asp-route-reservationId="@reservation.Id" method="post">
+                            <button class="btn btn-outline-secondary" type="submit">Cancel reservation</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

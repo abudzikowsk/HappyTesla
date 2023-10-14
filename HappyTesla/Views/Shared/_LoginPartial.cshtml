@@ -1,13 +1,29 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using HappyTesla.Data.Enums
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-controller="Reservations" asp-action="GetAllReservationsForCurrentlyLoggedInUser">My reservations</a>
-    </li>
+    if (User.IsInRole(UserRole.Admin.ToString()))
+    {
+        <li class="nav-item">
+            <a  class="nav-link text-dark" asp-controller="Admin" asp-action="GetAllCars">Cars</a>
+        </li>
+        <li class="nav-item">
+            <a  class="nav-link text-dark" asp-controller="Admin" asp-action="GetAllReservations">Reservations</a>
+        </li>
+        <li class="nav-item">
+            <a  class="nav-link text-dark" asp-controller="Admin" asp-action="GetAllLocations">Locations</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a  class="nav-link text-dark" asp-controller="Reservations" asp-action="GetAllReservationsForCurrentlyLoggedInUser">My reservations</a>
+        </li>
+    }
     <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
     </li>

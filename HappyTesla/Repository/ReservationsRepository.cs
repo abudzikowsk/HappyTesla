@@ -22,6 +22,15 @@ public class ReservationsRepository
             .Where(r => r.UserId == userId)
             .ToListAsync();
     }
+    
+    public async Task<List<Reservation>> GetAllReservationsAsync()
+    {
+        return await _applicationDbContext.Reservations
+            .Include(r => r.StartLocation)
+            .Include(r => r.EndLocation)
+            .Include(r => r.Car)
+            .ToListAsync();
+    }
 
     public async Task<Reservation> GetReservationByIdAsync(int id)
     {

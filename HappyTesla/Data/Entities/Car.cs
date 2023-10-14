@@ -12,10 +12,12 @@ public class Car
 
     public CarViewModel MapToViewModel()
     {
-        return new CarViewModel()
+        return new CarViewModel
         {
+            Id = Id,
             Name = Name,
             Model = Model,
+            Price = Price,
             Color = Color
         };
     }

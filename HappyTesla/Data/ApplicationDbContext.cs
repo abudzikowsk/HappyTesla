@@ -109,28 +109,28 @@ public class ApplicationDbContext : IdentityDbContext
                     Id = 1,
                     Country = "Spain",
                     City = "Palma de Mallorca",
-                    Adress = "Palma Airport"
+                    Address = "Palma Airport"
                 },
                 new Location
                 {
                     Id = 2,
                     Country = "Spain",
                     City = "Palma de Mallorca",
-                    Adress = "Palma City Center"
+                    Address = "Palma City Center"
                 },
                 new Location
                 {
                     Id = 3,
                     Country = "Spain",
                     City = "Alcúdia",
-                    Adress = "Alcúdia"
+                    Address = "Alcúdia"
                 },
                 new Location
                 {
                     Id = 4,
                     Country = "Spain",
                     City = "Manacor",
-                    Adress = "Manacor"
+                    Address = "Manacor"
                 }
                 );
         var adminRoleGuid = "cbf3e9c9-40bc-451a-86e2-9fde61e88627";

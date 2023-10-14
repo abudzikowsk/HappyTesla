@@ -1,0 +1,31 @@
+@model CreateLocationViewModel
+
+@{
+    ViewData["Title"] = "Create new location";
+}
+
+<h1 class="display-1">Create location</h1>
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Country"/>
+                <label asp-for="Country">Country</label>
+                <span class="text-danger" asp-validation-for="Country"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="City"/>
+                <label asp-for="City">City</label>
+                <span class="text-danger" asp-validation-for="City"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control mb-3" asp-for="Address"/>
+                <label asp-for="Address">Address</label>
+                <span class="text-danger" asp-validation-for="Address"></span>
+            </div>
+            <button class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
