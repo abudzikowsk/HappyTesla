@@ -38,12 +38,16 @@ public class AdminController : Controller
         return View(result);
     }
     
-    
     [HttpPost]
     [Route("{action}/{reservationId:int}")]
     public async Task<ActionResult> DeleteReservation(int reservationId)
     {
-        await _reservationsRepository.DeleteReservationAsync(reservationId);
+        var reservation = await _reservationsRepository.GetReservationByIdAsync(reservationId);
+        
+        if (reservation.StartDate > DateTime.Now)
+        {
+            await _reservationsRepository.DeleteReservationAsync(reservationId);
+        }
 
         return RedirectToAction("GetAllReservations");
     }
