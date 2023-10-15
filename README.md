@@ -49,7 +49,7 @@ Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTes
 ## Technologies Used
 
 - .NET 7: Empowering the application with web application capabilities.
-- Microsoft SQL Server: Ensuring solid data storage and management.
+- Microsoft SQLite: Ensuring solid data storage and management.
 - Entity Framework Core: Simplifying database operations for a seamless user experience.
 - ASP.NET Identity: Safeguarding user identities with top-tier authentication and authorization mechanisms.
 - Bootstrap: Creating a responsive and visually appealing user interface.
