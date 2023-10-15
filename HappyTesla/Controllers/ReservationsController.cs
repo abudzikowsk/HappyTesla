@@ -78,7 +78,7 @@ public class ReservationsController : Controller
         
         await _reservationsRepository.CreateReservationAsync(currentlyLoggedInUser,
             createReservationViewModel.StartLocationId, createReservationViewModel.EndLocationId, createReservationViewModel.CarId,
-            createReservationViewModel.StartDate, createReservationViewModel.EndDate, price);
+            createReservationViewModel.StartDate, createReservationViewModel.EndDate, price > 0 ? price : car.Price);
 
         return RedirectToAction("GetAllReservationsForCurrentlyLoggedInUser");
     }

@@ -12,7 +12,7 @@ public class CreateCarViewModel
     [MaxLength(255)]
     public string Model { get; set; }
     [Required]
-    [Range(0.00, 999999)]
+    [Range(0.01, 999999)]
     public decimal Price { get; set; }
     [Required]
     [MaxLength(255)]

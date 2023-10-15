@@ -11,6 +11,7 @@ public class CreateReservationViewModel
     [Required]
     public int EndLocationId { get; set; }
     [Required]
+    [IsCarAvailable]
     public int CarId { get; set; }
     
     [Required]

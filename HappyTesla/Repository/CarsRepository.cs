@@ -50,4 +50,14 @@ public class CarsRepository
         _applicationDbContext.Add(newCar);
         await _applicationDbContext.SaveChangesAsync();
     }
+
+    public async Task<bool> CheckIfCarIsAvailable(int carId, DateTime startDate, DateTime endDate)
+    {
+        var reservations = await _applicationDbContext.Reservations.Where(r =>
+            r.CarId == carId && startDate >= r.StartDate && endDate <= r.EndDate || (endDate >= r.StartDate && endDate <= r.EndDate)
+            || (startDate >= r.StartDate && startDate <= r.EndDate))
+            .ToListAsync();
+
+        return !reservations.Any();
+    }
 }
