@@ -42,9 +42,9 @@ Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTes
 
 - **Secure Reservations:** Your reservation details are safely stored in our database, making the process hassle-free and efficient.
 
-- **Admin Panel:** We provide an admin panel that allows administrators to manage available cars and locations. This feature ensures that the fleet is always up to date and available in the right places.
+- **Admin Panel:** App provides an admin panel that allows administrators to manage available cars and locations. This feature ensures that the fleet is always up to date and available in the right places.
 
-- **Renting Harmonogram:** Our platform includes a logic system that tracks the renting schedule, automating the management of reservations. This feature ensures efficient scheduling and availability for our customers.
+- **Renting Harmonogram:** Platform includes a logic system that tracks the renting schedule, automating the management of reservations. This feature ensures efficient scheduling and availability for our customers.
 
 ## Technologies Used
 
