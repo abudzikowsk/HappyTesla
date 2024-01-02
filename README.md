@@ -1,3 +1,8 @@
+## Concept
+
+Introducing "HappyTesla Mallorca" - Your Ultimate Electric Adventure on the Island! 
+Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTesla Mallorca. We offer seamless access to the future of driving with a fleet of all available passenger Tesla models, ensuring you enjoy an emission-free journey around the island.
+
 # App Screenshots
 ## User Panel
 
@@ -20,11 +25,6 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Possible App Extension](#possible-app-extension)
-
-## Concept
-
-Introducing "HappyTesla Mallorca" - Your Ultimate Electric Adventure on the Island! 
-Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTesla Mallorca. We offer seamless access to the future of driving with a fleet of all available passenger Tesla models, ensuring you enjoy an emission-free journey around the island.
 
 ## Features
 
