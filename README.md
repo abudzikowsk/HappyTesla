@@ -1,3 +1,8 @@
+## Concept
+
+Introducing "HappyTesla Mallorca" - Your Ultimate Electric Adventure on the Island! 
+Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTesla Mallorca. We offer seamless access to the future of driving with a fleet of all available passenger Tesla models, ensuring you enjoy an emission-free journey around the island.
+
 # App Screenshots
 ## User Panel
 
@@ -21,10 +26,6 @@
 - [Getting Started](#getting-started)
 - [Possible App Extension](#possible-app-extension)
 
-## Concept
-
-Introducing "HappyTesla Mallorca" - Your Ultimate Electric Adventure on the Island! Discover the beauty of Mallorca in style with our cutting-edge web app, HappyTesla Mallorca. We offer seamless access to the future of driving with a fleet of all available passenger Tesla models, ensuring you enjoy an emission-free journey around the island.
-
 ## Features
 
 - **Location Convenience:** Choose from multiple convenient pick-up and drop-off locations, including Palma Airport, Palma City Center, Alcudia, and Manacor. No matter where you start your adventure, we've got you covered.
@@ -41,14 +42,14 @@ Introducing "HappyTesla Mallorca" - Your Ultimate Electric Adventure on the Isla
 
 - **Secure Reservations:** Your reservation details are safely stored in our database, making the process hassle-free and efficient.
 
-- **Admin Panel:** We provide an admin panel that allows administrators to manage available cars and locations. This feature ensures that the fleet is always up to date and available in the right places.
+- **Admin Panel:** App provides an admin panel that allows administrators to manage available cars and locations. This feature ensures that the fleet is always up to date and available in the right places.
 
-- **Renting Harmonogram:** Our platform includes a logic system that tracks the renting schedule, automating the management of reservations. This feature ensures efficient scheduling and availability for our customers.
+- **Renting Harmonogram:** Platform includes a logic system that tracks the renting schedule, automating the management of reservations. This feature ensures efficient scheduling and availability for our customers.
 
 ## Technologies Used
 
 - .NET 7: Empowering the application with web application capabilities.
-- Microsoft SQL Server: Ensuring solid data storage and management.
+- Microsoft SQLite: Ensuring solid data storage and management.
 - Entity Framework Core: Simplifying database operations for a seamless user experience.
 - ASP.NET Identity: Safeguarding user identities with top-tier authentication and authorization mechanisms.
 - Bootstrap: Creating a responsive and visually appealing user interface.
